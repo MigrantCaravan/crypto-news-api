@@ -1,3 +1,5 @@
+# Crypto News API
+
 ## Available Scripts
 
 In the project server directory, you can run:
