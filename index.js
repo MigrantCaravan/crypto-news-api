@@ -3,7 +3,6 @@ const PORT = process.env.PORT || 4000;
 const express = require("express");
 const axios = require("axios");
 const cheerio = require("cheerio");
-const morgan = require("morgan");
 
 const newspapers = [
   {
@@ -105,14 +104,6 @@ express()
     );
     next();
   })
-  .use(morgan("tiny"))
-  .use(express.static("./server/assets"))
-  .use(express.json())
-  .use(express.urlencoded({ extended: false }))
-  .use("/", express.static(__dirname + "/"))
-
-  // REST endpoints?
-  .get("/bacon", (req, res) => res.status(200).json("🥓"))
 
   ////----------END POINTS----------////
 
